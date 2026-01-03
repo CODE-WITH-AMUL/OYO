@@ -1,0 +1,41 @@
+hotel_management_system/
+│
+├── main.py                  # Entry point (menu-driven program)
+│
+├── config/
+│   └── settings.py          # Global settings (hotel name, tax, room count)
+│
+├── database/
+│   ├── db.py                # Database connection (SQLite / file-based)
+│   └── schema.py            # Table creation logic
+│
+├── models/
+│   ├── guest.py             # Guest entity logic
+│   ├── room.py              # Room entity logic
+│   ├── booking.py           # Booking entity logic
+│   ├── payment.py           # Payment handling
+│   ├── service.py           # Services (food, laundry, spa)
+│   ├── menu_item.py         # Food menu items
+│   └── order.py             # Food orders & order items
+│
+├── services/
+│   ├── booking_service.py   # Booking workflow logic
+│   ├── order_service.py     # Food ordering logic
+│   ├── billing_service.py   # Bill calculation & invoice logic
+│   └── report_service.py    # Reports (daily sales, occupancy)
+│
+├── utils/
+│   ├── validators.py        # Input validation
+│   ├── helpers.py           # Common helper functions
+│   └── date_utils.py        # Date calculations
+│
+├── data/
+│   ├── guests.json          # Guest records (if file-based)
+│   ├── bookings.json        # Booking records
+│   ├── menu.json            # Food menu
+│   └── services.json        # Services data
+│
+├── logs/
+│   └── system.log           # Application logs
+│
+└── README.md

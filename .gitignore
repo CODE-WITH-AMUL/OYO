@@ -1,22 +1,70 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
+# .gitignore for this Project
+# =====================================
+
+# --------- VS Code Settings ---------
+# Local VS Code settings (user-specific, not shared)
 .vscode/
-#Cache folder
+
+# --------- Cache / Symbol Packages ---------
+# Compiled AL cache files
 .alcache/
-#Symbols folder
+# Symbol packages downloaded from BC server
 .alpackages/
-#Snapshots folder
+
+# --------- Snapshots / Build Output ---------
+# Auto-saved snapshots (temporary)
 .snapshots/
-#Testing Output folder
+# Test / build output
 .output/
-#Extension App-file
+
+# --------- Compiled Extension Files ---------
+# Generated app files
 *.app
-#Rapid Application Development File
+
+# --------- Rapid Application Development ---------
+# RAD configuration files (local dev only)
 rad.json
-#Translation Base-file
+
+# --------- Translation Files ---------
+# Generated translation base files
 *.g.xlf
-#License-file
+
+# --------- License Files ---------
+# Local license file, sensitive
 *.flf
-#Test results file
+
+# --------- Test Results ---------
+# Unit test / integration test outputs
 TestResults.xml
+
+# --------- Environment / Secrets ---------
+# Local environment variables
+.env
+
+# =====================================
+# Ignore local database files / structure
+# =====================================
+database/           # Local database folder (dev/testing)
+.structure.txt      # Generated DB structure file
+
+# =====================================
+# Ignore logs / temporary data
+# =====================================
+logs/               # Application logs
+data/               # Local JSON / CSV / other data files
+
+# =====================================
+# Ignore configuration / environment files
+# =====================================
+config/             # Local configs (if contains secrets)
+.env                # Environment variables
+
+
+# =====================================
+# Track these in Git (do NOT ignore)
+# =====================================
+# *.al                # Your AL source code files
+# app.json            # App manifest / extension metadata
+# launch.json         # Debug configuration (template only)
+# *.xlf               # Original translation files (not generated *.g.xlf)
+# Custom scripts, docs, configs
